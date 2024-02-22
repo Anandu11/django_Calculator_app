@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Checker</title>
+</head>
+<body>
+    <h1>Prime Checker</h1>
+    <form method="post">
+        {% csrf_token %}
+       
+        
+        <label for="input_number">Enter a number :</label>
+        <input type="text" name="input_number">
+        <br>
+        <button type="submit">Check Prime</button>
+    </form>
+
+    {%if is_prime %}
+        <p>The entered number is prime.</p>
+    {%else%}
+        <p>The entered number is not prime.</p>
+    {%endif%} 
+</body>
+</html>
